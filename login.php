@@ -1,5 +1,20 @@
 <?php	
-include "__header.php";		?>
+include "__header.php";	
+
+
+if (isset($_SESSION['AdminID']) && isset($_SESSION['AdminName']) && isset($_SESSION['AdminEmail'])) {
+	echo "<script>window.location.replace('../admin');</script>";
+	exit();
+}
+
+elseif (isset($_SESSION['UserID']) && isset($_SESSION['NodalOfficer']) && isset($_SESSION['NodalEmail'])) {
+	echo "<script>window.location.replace('../nodal');</script>";
+	exit();
+}
+
+else {
+
+	?>
 
 <?php
 
@@ -169,4 +184,6 @@ else{
 </script>
 
 
-<?php	include "__footer.php";		?>
+<?php	include "__footer.php";		
+}
+?>
