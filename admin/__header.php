@@ -36,7 +36,7 @@ if (!isset($_SESSION['AdminID']) && !isset($_SESSION['AdminName']) && !isset($_S
          	<ul class="navbar-nav flex-column" id="sideNavbar">
             	<li class="nav-item">
             		<a class="nav-link text-white" href="../nodal"><i class="nav-icon fe fe-message-square me-2"></i> Dashboard</a>
-            		<a class="nav-link text-white" href="../nodal/security-audit-form"><i class="nav-icon fe fe-message-square me-2"></i> Security Audit Form</a>
+            		<a class="nav-link text-white" href="../admin/view-nodal.php"><i class="nav-icon fe fe-message-square me-2"></i> View Nodal</a>
              	</li>         
          	</ul>
     	</div>
@@ -62,8 +62,8 @@ if (!isset($_SESSION['AdminID']) && !isset($_SESSION['AdminName']) && !isset($_S
                                 			<img alt="avatar" src="../assets/images/user.jpg" class="rounded-circle" >
                             			</div>
                             			<div class="ms-3 lh-1">
-                                			<h5 class="mb-1"><?php echo $_SESSION['NodalOfficer']; ?></h5>
-                                			<p class="mb-0 text-muted"><?php echo $_SESSION['NodalEmail']; ?></p>
+                                			<h5 class="mb-1"><?php echo $_SESSION['AdminName']; ?></h5>
+                                			<p class="mb-0 text-muted"><?php echo $_SESSION['AdminEmail']; ?></p>
                             			</div>
                         			</div>
                     			</div>

@@ -1,14 +1,14 @@
 <?php	
 
+session_destroy();
+session_unset();
+
+
+header("Location: /");
+
 include "__header.php";
 
 
-
-    session_destroy();
-    session_unset();
-
-
-    header("Location: /");
 
 ?>
 

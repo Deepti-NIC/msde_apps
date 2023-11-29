@@ -12,20 +12,21 @@
                     </div>
                 </div>
 
+             
 				<?php
 					$query = "SELECT COUNT(VC.Domain_Name), SUM(CASE WHEN VC.SSL_Days_Left < 0 THEN 1 ELSE 0 END) FROM view_cron VC INNER JOIN domain_data DD ON DD.Domain_Name = VC.Domain_Name;";
 					$stmt = mysqli_prepare($conn, $query);
 					if (!$stmt) {
 						die("Error: " . mysqli_error($conn));
 					}
-                    $UserID = $_SESSION['UserID'];
-					mysqli_stmt_bind_param($stmt, "s", $UserID);
+                    
 					if (mysqli_stmt_execute($stmt)) {
 						mysqli_stmt_bind_result($stmt, $domainName_count, $sslDaysLeft_count);
 						while (mysqli_stmt_fetch($stmt)) {
 ?>
 
-<section class="mt-4">
+
+                <section class="mt-4">
         <div class="container">
             <div class="row g-4">
                 <div class="col-12">
@@ -51,7 +52,7 @@
                                         <span class="material-symbols-outlined">lock</span>
                                     </div>
                                     <div class="ms-3">
-                                    <h3 class="mb-0"><?php echo $sslDaysLeft_count; ?></h3>
+                                        <h3 class="mb-0"><?php echo $sslDaysLeft_count; ?></h3>
                                         <h6 class="mb-0">SSL Expired</h6>
                                     </div>
                                 </div>
@@ -103,9 +104,6 @@
 
 
 
-
-
-
 <section class="py-4">
 	<div class="container">
         <div class="row g-4">
@@ -125,16 +123,15 @@
                         <div class="row">
                             <div class="col-12">
 				<?php
-		//			$query = "SELECT CUST.Username, CUST.NodalOfficer, VC.Domain_Name, VC.SSL_Expiry_Date, VC.SSL_Days_Left, SSL_Last_Renewed FROM `view_cron` VC INNER JOIN domain_data DD ON VC.Domain_Name = DD.Domain_Name INNER JOIN users CUST ON DD.UserID = CUST.UserID WHERE CUST.Username = ?;";
-					$query = "SELECT VC.Domain_Name, VC.SSL_Expiry_Date, VC.SSL_Days_Left, SSL_Last_Renewed FROM `view_cron` VC INNER JOIN domain_data DD ON VC.Domain_Name = DD.Domain_Name INNER JOIN users CUST ON DD.UserID = CUST.UserID WHERE CUST.UserID = ? LIMIT 4;";
+					$status = 1;
+					$query = "SELECT x.Domain_Name, y.SSL_Expiry_Date, y.SSL_Days_Left, y.SSL_Last_Renewed, y.Timestamp FROM (SELECT id, domain_name, status FROM domain_data WHERE status = ? ORDER BY domain_name) x INNER JOIN daily_cron y ON x.id = y.fk_id WHERE y.Timestamp = (SELECT MAX(Timestamp) FROM daily_cron) ORDER BY y.SSL_Days_Left LIMIT 4";
 					$stmt = mysqli_prepare($conn, $query);
 					if (!$stmt) {
 						die("Error: " . mysqli_error($conn));
 					}
-                    $UserID = $_SESSION['UserID'];
-					mysqli_stmt_bind_param($stmt, "s", $UserID);
+					mysqli_stmt_bind_param($stmt, "i", $status);
 					if (mysqli_stmt_execute($stmt)) {
-						mysqli_stmt_bind_result($stmt, $domainName, $sslExpiryDate, $sslDaysLeft, $sslLastRenewed);
+						mysqli_stmt_bind_result($stmt, $domainName, $sslExpiryDate, $sslDaysLeft, $sslLastRenewed, $timestamp);
 						while (mysqli_stmt_fetch($stmt)) {
 							$sslExpiryDateFormatted = date("d-m-Y", strtotime($sslExpiryDate));
 							$sslLastRenewedFormatted = date("d-m-Y", strtotime($sslLastRenewed));
@@ -196,15 +193,14 @@
               		<tbody>
 				<?php
 					$status = 1;
-					$query = "SELECT VC.Domain_Name, VC.SSL_Expiry_Date, VC.SSL_Days_Left, SSL_Last_Renewed FROM `view_cron` VC INNER JOIN domain_data DD ON VC.Domain_Name = DD.Domain_Name INNER JOIN users CUST ON DD.UserID = CUST.UserID WHERE CUST.UserID = ?;";
+					$query = "SELECT x.Domain_Name, y.SSL_Expiry_Date, y.SSL_Days_Left, y.SSL_Last_Renewed, y.Timestamp FROM (SELECT id, domain_name, status FROM domain_data WHERE status = ? ORDER BY domain_name) x INNER JOIN daily_cron y ON x.id = y.fk_id WHERE y.Timestamp = (SELECT MAX(Timestamp) FROM daily_cron) ORDER BY y.SSL_Days_Left";
 					$stmt = mysqli_prepare($conn, $query);
 					if (!$stmt) {
 						die("Error: " . mysqli_error($conn));
 					}
-                    $UserID = $_SESSION['UserID'];
-					mysqli_stmt_bind_param($stmt, "s", $UserID);
+					mysqli_stmt_bind_param($stmt, "i", $status);
 					if (mysqli_stmt_execute($stmt)) {
-						mysqli_stmt_bind_result($stmt, $domainName, $sslExpiryDate, $sslDaysLeft, $sslLastRenewed);
+						mysqli_stmt_bind_result($stmt, $domainName, $sslExpiryDate, $sslDaysLeft, $sslLastRenewed, $timestamp);
 						while (mysqli_stmt_fetch($stmt)) {
 							$sslExpiryDateFormatted = date("d-m-Y", strtotime($sslExpiryDate));
 							$sslLastRenewedFormatted = date("d-m-Y", strtotime($sslLastRenewed));
@@ -241,15 +237,15 @@
 	</thead>
 	<tbody>
 		<?php
-            $query = "SELECT VC.Domain_Name, VC.SSL_Expiry_Date, VC.SSL_Days_Left, SSL_Last_Renewed FROM `view_cron` VC INNER JOIN domain_data DD ON VC.Domain_Name = DD.Domain_Name INNER JOIN users CUST ON DD.UserID = CUST.UserID WHERE CUST.UserID = ?;";
+			$status = 1;
+			$query = "SELECT x.Domain_Name, y.SSL_Expiry_Date, y.SSL_Days_Left, y.SSL_Last_Renewed, y.Timestamp FROM (SELECT id, domain_name, status FROM domain_data WHERE status = ? ORDER BY domain_name) x INNER JOIN daily_cron y ON x.id = y.fk_id WHERE y.Timestamp = (SELECT MAX(Timestamp) FROM daily_cron) ORDER BY y.SSL_Days_Left";
 			$stmt = mysqli_prepare($conn, $query);
 			if (!$stmt) {
 				die("Error: " . mysqli_error($conn));
 			}
-            $UserID = $_SESSION['UserID'];
-			mysqli_stmt_bind_param($stmt, "i", $UserID);
+			mysqli_stmt_bind_param($stmt, "i", $status);
 			if (mysqli_stmt_execute($stmt)) {
-				mysqli_stmt_bind_result($stmt, $domainName, $sslExpiryDate, $sslDaysLeft, $sslLastRenewed);
+				mysqli_stmt_bind_result($stmt, $domainName, $sslExpiryDate, $sslDaysLeft, $sslLastRenewed, $timestamp);
 				while (mysqli_stmt_fetch($stmt)) {
 					$websiteColor = ($sslDaysLeft <= 30) ? ' text-danger' : '';
 					echo "<tr>";
@@ -440,18 +436,10 @@
 </script>
 
 
-         
-
-
-
-
-
-
-           
-
-
 
             <?php
+                
+                
     include "__footer.php";
 
 
