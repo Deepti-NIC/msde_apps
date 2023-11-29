@@ -21,7 +21,7 @@
                                             <th>#</th>
                                             <th>Domain Name</th>
                                             <th>Public IP</th>
-                                            <th>Status</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -35,22 +35,22 @@ $vn_count = 0;
             echo "<td>$vn_count </td>";
             echo "<td>$vn_domain_name </td>";
             echo "<td>$vn_public_ip</td>";
-
+            echo "<td>";
             if($vn_status == 1){
-                echo "<td><span class='btn btn-sm btn-success mb-2'>Active</span></td>";
+                echo "<span class='btn btn-sm btn-success mb-2'>Active</span>";
             }
             else{
-                echo "<td><span class='btn btn-sm btn-danger mb-2'>Inactive</span></td>";
+                echo "<span class='btn btn-sm btn-danger mb-2'>Inactive</span>";
 
             }
 
+            echo "<a href ='http://$vn_domain_name' class='btn btn-sm btn-info mb-2 ms-2' target='_blank'>Visit Website</a>";
             echo "</tr>";
         }
 
         ?>
                                     </tbody>
     </table>
-
 
 <?php
 

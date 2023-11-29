@@ -78,7 +78,7 @@ mysqli_close($conn);
   <div class="modal-dialog modal-lg"> 
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5">View</h1>
+        <h1 class="modal-title fs-5 data-heading">View</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="data-details">
@@ -93,16 +93,16 @@ mysqli_close($conn);
 $(document).ready(function () {
  $(".view-data").click(function () {
  var data_id = $(this).data('id');
- 
+ var dprtmnt = $(this).closest('tr').find('td:eq(1)').text();
+
  $.ajax({
  url: 'pager/users-list.php',
  type: 'POST',
  data: {id: data_id},
  success: function (response) {
  $('#data-details').html(response);
- console.log(data_id);
- console.log(response);
  $('#data-modal').modal('show');
+ document.querySelector('.data-heading').innerHTML = dprtmnt;
  }
  });
  });
