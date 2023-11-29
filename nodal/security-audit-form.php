@@ -30,7 +30,6 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Website</th>
-                                                <th>Audited On</th>
                                                 <th>Audit Valid Till</th>
                                                 <th>Audit Doc</th>
                                                 <th></th>
@@ -40,7 +39,6 @@
                                             <tr class="accordion-toggle collapsed" id="accordion1" data-bs-toggle="collapse" data-bs-parent="#accordion1" data-bs-target="#collapseOne">
                                                 <td>1</td>
                                                 <td>indiaskills.org</td>
-                                                <td>Nov 08, 2022</td>
                                                 <td>Nov 07, 2023</td>
                                                 <td><span class="badge bg-primary">pdf</span></td>
                                                 <td><span class="btn-icon btn btn-ghost btn-sm rounded-circle"><span class="material-symbols-outlined">more_vert</span></span></td>

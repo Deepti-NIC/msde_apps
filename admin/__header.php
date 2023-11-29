@@ -3,7 +3,7 @@
 //	var_dump($_SESSION);
 
 
-if (!isset($_SESSION['UserID']) && !isset($_SESSION['NodalOfficer']) && !isset($_SESSION['NodalEmail'])) {
+if (!isset($_SESSION['AdminID']) && !isset($_SESSION['AdminName']) && !isset($_SESSION['AdminEmail'])) {
         header("Location: ../login");
     }
 
