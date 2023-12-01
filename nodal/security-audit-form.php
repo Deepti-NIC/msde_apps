@@ -2,7 +2,7 @@
     include "__header.php"; 
     ?>
 
-<script src="https://indiaskills.org/nic/assets/js/vendors/highcharts.js"></script>
+<script src="../assets/js/vendors/highcharts.js"></script>
 
                 <div class="row bg-white m-n4">
                     <div class="col-lg-12 col-md-12 col-12">
@@ -55,17 +55,62 @@
 
 
 
+                    <div class="row mt-8">
+                <div class="col-lg-12 col-md-12 col-12">
+            <div class="card rounded-3">
+                <div class="table-responsive border-0 overflow-y-hidden">
+                                        <table class="table mb-0 text-nowrap table-centered table-hover">
+                                                <thead class="table-light bg-white">
+                            <tr>
+                                                <th>#</th>
+                                                <th>Website</th>
+                                                <th>Audit Valid Till</th>
+                                                <th>Audit Doc</th>
+                                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-        <script src="https://indiaskills.org/nic/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="https://indiaskills.org/nic/assets/libs/pdfmake/build/pdfmake.min.js"></script>
+                            <?php
+
+                                $query = "SELECT A.UserID, A.UserName, COUNT(B.Domain_Name), A.NodalOfficer FROM users A INNER JOIN domain_data B ON A.UserID = B.UserID GROUP BY A.UserID, A.UserName, A.NodalOfficer ORDER BY A.UserName;";
+                                if($stmt = mysqli_prepare($conn, $query)) {
+                                    if(mysqli_stmt_execute($stmt)) {
+                                        mysqli_stmt_bind_result($stmt, $id, $e_userName, $e_domainCount, $e_nodalOfficer);
+                                        $counting = 0;
+                                        while (mysqli_stmt_fetch($stmt)) {
+                                            $counting++;
+                            ?>
+                            <tr>
+                                <td class='small mb-0'><?php echo $counting; ?></td>
+                                <td class='small mb-0'><?php echo $e_userName; ?></td>
+                                <td class='h6'><?php echo $e_domainCount; ?></td>
+                                <td class='small mb-0'><span class="badge bg-primary">pdf</span></td>
+                                <td class='small mb-0'>
+                                <button type="button" class="btn btn-sm btn-info mb-2">Nodal Details</button>
+                                <button type="button" class="btn btn-sm btn-success mb-2 ms-1 view-data" data-id="<?php echo $id; ?>">View Websites</button>
+                            </tr>
+
+<?php
+    }
+
+    mysqli_stmt_close($stmt);
+} else {
+    echo "Statement execution failed: " . mysqli_error($conn);
+}
+} else {
+echo "Prepared statement creation failed: " . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
