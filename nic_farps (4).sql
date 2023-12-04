@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2023 at 05:37 AM
+-- Generation Time: Dec 04, 2023 at 10:04 AM
 -- Server version: 8.0.35
 -- PHP Version: 8.2.4
 
@@ -44,8 +44,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`AdminID`, `Username`, `AdminName`, `AdminEmail`, `AdminContact`, `CreatedOn`, `LastUpdated`, `IsActive`, `Password`) VALUES
-(1, 'prajapati.sachin', 'Sachin Prajapati', 'prajapati.sachin@hotmail.com', 9084015544, '2023-10-23 12:34:11', '2023-10-29 01:16:13', 1, 'e1e0f88ea63cab31d0d3ec43304ef0c1e522e0e954b44d219e037877ba226dfc082d9ffe900c2d2d1ec472432ec2b1e637590561e6970d27e682adf640f24ae4d06fc602866429b5a6763e5e44bae3d137e45afd097c261dd0a76177068af43d'),
-(2, 'deepti.khanduja', 'Deepti Khanduja', 'deepti.khanduja@nic.in', 9876543210, '2023-10-23 12:34:11', '2023-10-29 01:16:21', 1, 'f634f113e461a7c463cdfb618f374bc044638937e8c6f221c74d4cb372a3a732020f2f0f9ea8b189f646c74320a0a6a4f2d85bd86608748b894a00f532622d0db6242d055b9f311a68810d2b7a129fcfdd5fc52d31ac54e0f599a49f2e602942');
+(1, 'sachin', 'Sachin Prajapati', 'prajapati.sachin@hotmail.com', 9084015544, '2023-10-23 12:34:11', '2023-11-28 17:49:57', 1, 'e1e0f88ea63cab31d0d3ec43304ef0c1e522e0e954b44d219e037877ba226dfc082d9ffe900c2d2d1ec472432ec2b1e637590561e6970d27e682adf640f24ae4d06fc602866429b5a6763e5e44bae3d137e45afd097c261dd0a76177068af43d'),
+(2, 'deepti', 'Deepti Khanduja', 'deepti.khanduja@nic.in', 9876543210, '2023-10-23 12:34:11', '2023-11-29 00:36:56', 1, 'f634f113e461a7c463cdfb618f374bc044638937e8c6f221c74d4cb372a3a732020f2f0f9ea8b189f646c74320a0a6a4f2d85bd86608748b894a00f532622d0db6242d055b9f311a68810d2b7a129fcfdd5fc52d31ac54e0f599a49f2e602942');
 
 -- --------------------------------------------------------
 
@@ -1057,7 +1057,95 @@ INSERT INTO `daily_cron` (`id`, `fk_id`, `SSL_Expiry_Date`, `SSL_Days_Left`, `SS
 (987, 21, '2023-11-26', 9, '2022-12-13', '2023-11-17 03:54:53'),
 (988, 22, '2024-01-07', 51, '2022-12-06', '2023-11-17 03:54:53'),
 (989, 23, '2024-09-23', 311, '2023-09-26', '2023-11-17 03:54:53'),
-(990, 24, '2024-01-07', 51, '2022-12-06', '2023-11-17 03:54:53');
+(990, 24, '2024-01-07', 51, '2022-12-06', '2023-11-17 03:54:53'),
+(991, 1, '2023-12-12', 13, '2022-12-12', '2023-11-29 06:31:41'),
+(992, 2, '2024-01-10', 42, '2023-01-10', '2023-11-29 06:31:41'),
+(993, 3, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:31:41'),
+(994, 4, '2024-02-06', 70, '2023-01-05', '2023-11-29 06:31:41'),
+(995, 5, '2024-09-23', 299, '2023-09-26', '2023-11-29 06:31:41'),
+(996, 6, '2024-10-06', 312, '2023-09-06', '2023-11-29 06:31:41'),
+(997, 7, '2024-09-22', 298, '2023-09-22', '2023-11-29 06:31:41'),
+(998, 8, '2024-09-23', 299, '2023-09-23', '2023-11-29 06:31:41'),
+(999, 9, '2024-09-03', 279, '2023-08-05', '2023-11-29 06:31:41'),
+(1000, 10, '2024-05-05', 158, '2023-04-06', '2023-11-29 06:31:41'),
+(1001, 11, '2024-11-01', 339, '2023-11-01', '2023-11-29 06:31:41'),
+(1002, 12, '2024-12-07', 374, '2023-11-06', '2023-11-29 06:31:41'),
+(1003, 13, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:31:41'),
+(1004, 14, '2023-11-26', -3, '2022-12-13', '2023-11-29 06:31:41'),
+(1005, 17, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:31:41'),
+(1006, 18, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:31:41'),
+(1007, 19, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:31:41'),
+(1008, 20, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:31:42'),
+(1009, 21, '2023-11-26', -3, '2022-12-13', '2023-11-29 06:31:42'),
+(1010, 22, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:31:42'),
+(1011, 23, '2024-09-23', 299, '2023-09-26', '2023-11-29 06:31:42'),
+(1012, 24, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:31:42'),
+(1013, 1, '2023-12-12', 13, '2022-12-12', '2023-11-29 06:32:26'),
+(1014, 2, '2024-01-10', 42, '2023-01-10', '2023-11-29 06:32:26'),
+(1015, 3, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:32:26'),
+(1016, 4, '2024-02-06', 70, '2023-01-05', '2023-11-29 06:32:26'),
+(1017, 5, '2024-09-23', 299, '2023-09-26', '2023-11-29 06:32:26'),
+(1018, 6, '2024-10-06', 312, '2023-09-06', '2023-11-29 06:32:26'),
+(1019, 7, '2024-09-22', 298, '2023-09-22', '2023-11-29 06:32:26'),
+(1020, 8, '2024-09-23', 299, '2023-09-23', '2023-11-29 06:32:26'),
+(1021, 9, '2024-09-03', 279, '2023-08-05', '2023-11-29 06:32:26'),
+(1022, 10, '2024-05-05', 158, '2023-04-06', '2023-11-29 06:32:26'),
+(1023, 11, '2024-11-01', 339, '2023-11-01', '2023-11-29 06:32:26'),
+(1024, 12, '2024-12-07', 374, '2023-11-06', '2023-11-29 06:32:26'),
+(1025, 13, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:32:26'),
+(1026, 14, '2023-11-26', -3, '2022-12-13', '2023-11-29 06:32:26'),
+(1027, 17, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:32:26'),
+(1028, 18, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:32:26'),
+(1029, 19, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:32:26'),
+(1030, 20, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:32:26'),
+(1031, 21, '2023-11-26', -3, '2022-12-13', '2023-11-29 06:32:26'),
+(1032, 22, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:32:26'),
+(1033, 23, '2024-09-23', 299, '2023-09-26', '2023-11-29 06:32:26'),
+(1034, 24, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:32:26'),
+(1035, 1, '2023-12-12', 13, '2022-12-12', '2023-11-29 06:34:57'),
+(1036, 2, '2024-01-10', 42, '2023-01-10', '2023-11-29 06:34:57'),
+(1037, 3, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:34:57'),
+(1038, 4, '2024-02-06', 70, '2023-01-05', '2023-11-29 06:34:57'),
+(1039, 5, '2024-09-23', 299, '2023-09-26', '2023-11-29 06:34:57'),
+(1040, 6, '2024-10-06', 312, '2023-09-06', '2023-11-29 06:34:57'),
+(1041, 7, '2024-09-22', 298, '2023-09-22', '2023-11-29 06:34:57'),
+(1042, 8, '2024-09-23', 299, '2023-09-23', '2023-11-29 06:34:57'),
+(1043, 9, '2024-09-03', 279, '2023-08-05', '2023-11-29 06:34:57'),
+(1044, 10, '2024-05-05', 158, '2023-04-06', '2023-11-29 06:34:57'),
+(1045, 11, '2024-11-01', 339, '2023-11-01', '2023-11-29 06:34:57'),
+(1046, 12, '2024-12-07', 374, '2023-11-06', '2023-11-29 06:34:57'),
+(1047, 13, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:34:57'),
+(1048, 14, '2023-11-26', -3, '2022-12-13', '2023-11-29 06:34:57'),
+(1049, 17, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:34:57'),
+(1050, 18, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:34:57'),
+(1051, 19, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:34:57'),
+(1052, 20, '2024-03-02', 94, '2023-01-30', '2023-11-29 06:34:57'),
+(1053, 21, '2023-11-26', -3, '2022-12-13', '2023-11-29 06:34:57'),
+(1054, 22, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:34:57'),
+(1055, 23, '2024-09-23', 299, '2023-09-26', '2023-11-29 06:34:57'),
+(1056, 24, '2024-01-07', 39, '2022-12-06', '2023-11-29 06:34:57'),
+(1057, 1, '2023-12-12', 13, '2022-12-12', '2023-11-29 09:18:46'),
+(1058, 2, '2024-01-10', 42, '2023-01-10', '2023-11-29 09:18:46'),
+(1059, 3, '2024-03-02', 94, '2023-01-30', '2023-11-29 09:18:46'),
+(1060, 4, '2024-02-06', 70, '2023-01-05', '2023-11-29 09:18:46'),
+(1061, 5, '2024-09-23', 299, '2023-09-26', '2023-11-29 09:18:46'),
+(1062, 6, '2024-10-06', 312, '2023-09-06', '2023-11-29 09:18:46'),
+(1063, 7, '2024-09-22', 298, '2023-09-22', '2023-11-29 09:18:46'),
+(1064, 8, '2024-09-23', 299, '2023-09-23', '2023-11-29 09:18:46'),
+(1065, 9, '2024-09-03', 279, '2023-08-05', '2023-11-29 09:18:46'),
+(1066, 10, '2024-05-05', 158, '2023-04-06', '2023-11-29 09:18:46'),
+(1067, 11, '2024-11-01', 338, '2023-11-01', '2023-11-29 09:18:46'),
+(1068, 12, '2024-12-07', 374, '2023-11-06', '2023-11-29 09:18:46'),
+(1069, 13, '2024-01-07', 39, '2022-12-06', '2023-11-29 09:18:46'),
+(1070, 14, '2023-11-26', -3, '2022-12-13', '2023-11-29 09:18:46'),
+(1071, 17, '2024-03-02', 94, '2023-01-30', '2023-11-29 09:18:46'),
+(1072, 18, '2024-03-02', 94, '2023-01-30', '2023-11-29 09:18:46'),
+(1073, 19, '2024-03-02', 94, '2023-01-30', '2023-11-29 09:18:46'),
+(1074, 20, '2024-03-02', 94, '2023-01-30', '2023-11-29 09:18:46'),
+(1075, 21, '2023-11-26', -3, '2022-12-13', '2023-11-29 09:18:46'),
+(1076, 22, '2024-01-07', 39, '2022-12-06', '2023-11-29 09:18:46'),
+(1077, 23, '2024-09-23', 299, '2023-09-26', '2023-11-29 09:18:46'),
+(1078, 24, '2024-01-07', 39, '2022-12-06', '2023-11-29 09:18:46');
 
 -- --------------------------------------------------------
 
@@ -1084,40 +1172,44 @@ CREATE TABLE `daily_cron1` (
 CREATE TABLE `domain_data` (
   `id` int NOT NULL,
   `Domain_Name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Private_IP` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Public_IP` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `Audit_Valid_Till` date DEFAULT NULL,
+  `Security_Audit_Report` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `UserID` int DEFAULT NULL,
-  `Status` int DEFAULT NULL
+  `Status` int DEFAULT NULL,
+  `Last_Modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `domain_data`
 --
 
-INSERT INTO `domain_data` (`id`, `Domain_Name`, `Public_IP`, `UserID`, `Status`) VALUES
-(1, 'nqr.gov.in', NULL, NULL, 1),
-(2, 'msde.gov.in', NULL, 4, 1),
-(3, 'ncvtmis.gov.in', NULL, NULL, 1),
-(4, 'iie.gov.in', NULL, NULL, 1),
-(5, 'bharatskills.gov.in', NULL, 1, 1),
-(6, 'sankalp.msde.gov.in', NULL, NULL, 1),
-(7, 'jss.gov.in', NULL, NULL, 1),
-(8, 'nimi.gov.in', NULL, NULL, 1),
-(9, 'apprenticeshipindia.gov.in', NULL, NULL, 1),
-(10, 'www.skillindiadigital.gov.in', NULL, 4, 1),
-(11, 'ncvet.gov.in', NULL, NULL, 1),
-(12, 'niesbud.nic.in', NULL, NULL, 1),
-(13, 'dgt.gov.in', NULL, 1, 1),
-(14, 'apprenticeship.gov.in', NULL, NULL, 1),
-(15, 'dgt.nic.in', NULL, 1, 1),
-(16, 'dget.nic.in', NULL, 1, 1),
-(17, 'help.ncvtmis.gov.in', NULL, NULL, 1),
-(18, 'stage.ncvtmis.gov.in', NULL, NULL, 1),
-(19, 'api.ncvtmis.gov.in', NULL, NULL, 1),
-(20, 'login.ncvtmis.gov.in', NULL, NULL, 1),
-(21, 'sdis.gov.in', NULL, 1, 1),
-(22, 'fleximou.dgt.gov.in', NULL, NULL, 1),
-(23, 'bskillforum.bharatskills.gov.in', NULL, NULL, 1),
-(24, 'events.dgt.gov.in', NULL, NULL, 1);
+INSERT INTO `domain_data` (`id`, `Domain_Name`, `Private_IP`, `Public_IP`, `Audit_Valid_Till`, `Security_Audit_Report`, `UserID`, `Status`, `Last_Modified`) VALUES
+(1, 'nqr.gov.in', '', '164.100.94.241', NULL, '', 2, 1, '2023-12-04 05:08:45'),
+(2, 'msde.gov.in', '', '164.100.115.229', NULL, '', 4, 1, '2023-12-04 05:08:45'),
+(3, 'ncvtmis.gov.in', '', '164.100.68.103', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(4, 'iie.gov.in', '', '103.158.204.133', NULL, '', 4, 1, '2023-12-04 05:08:45'),
+(5, 'bharatskills.gov.in', '', '164.100.117.141', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(6, 'sankalp.msde.gov.in', '', '164.100.65.119', NULL, '', 4, 1, '2023-12-04 05:08:45'),
+(7, 'jss.gov.in', '', '164.100.65.73', NULL, '', 4, 1, '2023-12-04 05:08:45'),
+(8, 'nimi.gov.in', '', '103.14.122.191', NULL, '', 4, 1, '2023-12-04 05:08:45'),
+(9, 'apprenticeshipindia.gov.in', '', '3.6.112.122', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(10, 'www.skillindiadigital.gov.in', '', NULL, NULL, '', 4, 1, '2023-12-04 05:08:45'),
+(11, 'ncvet.gov.in', '', '164.100.65.108', NULL, '', 2, 1, '2023-12-04 05:08:45'),
+(12, 'niesbud.nic.in', '', '164.100.94.65', NULL, '', 3, 1, '2023-12-04 05:08:45'),
+(13, 'dgt.gov.in', '', '164.100.117.142', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(14, 'apprenticeship.gov.in', '', '164.100.78.167', '2023-12-09', '../uploads/656d95a9ee82b.pdf', 1, 1, '2023-12-04 09:02:34'),
+(15, 'dgt.nic.in', '', '164.100.117.142', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(16, 'dget.nic.in', '', '164.100.117.142', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(17, 'help.ncvtmis.gov.in', '', '164.100.68.105', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(18, 'stage.ncvtmis.gov.in', '', '164.100.68.244', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(19, 'api.ncvtmis.gov.in', '', '164.100.213.37', '2023-12-08', '../uploads/656d94374d59f.pdf', 1, 1, '2023-12-04 08:56:23'),
+(20, 'login.ncvtmis.gov.in', '', '164.100.213.39', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(21, 'sdis.gov.in', '', '164.100.158.143', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(22, 'fleximou.dgt.gov.in', '', '164.100.117.162', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(23, 'bskillforum.bharatskills.gov.in', '', '164.100.117.161', NULL, '', 1, 1, '2023-12-04 05:08:45'),
+(24, 'events.dgt.gov.in', '', '164.100.117.164', NULL, '', 1, 1, '2023-12-04 05:08:45');
 
 -- --------------------------------------------------------
 
@@ -1719,7 +1811,75 @@ INSERT INTO `hit_counter` (`id`, `IP`, `Device`, `Client`, `Timestamp`) VALUES
 (577, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-19 17:55:00'),
 (578, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-19 17:55:13'),
 (579, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-19 17:55:13'),
-(580, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-19 17:55:18');
+(580, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-19 17:55:18'),
+(581, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 05:50:53'),
+(582, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 05:51:05'),
+(583, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 05:51:26'),
+(584, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 05:54:48'),
+(585, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 05:55:04'),
+(586, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 05:55:26'),
+(587, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 05:55:40'),
+(588, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-21 12:31:17'),
+(589, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-22 03:47:24'),
+(590, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-22 03:49:25'),
+(591, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-22 03:49:36'),
+(592, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-22 03:49:51'),
+(593, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-22 08:20:59'),
+(594, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-22 08:21:05'),
+(595, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-22 08:21:26'),
+(596, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-23 17:19:14'),
+(597, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-23 17:19:35'),
+(598, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-23 17:19:35'),
+(599, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-23 17:19:38'),
+(600, '::1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-24 08:21:20'),
+(601, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-25 11:27:29'),
+(602, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-28 17:47:50'),
+(603, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-28 17:48:04'),
+(604, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-28 17:48:34'),
+(605, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-28 17:49:44'),
+(606, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-28 17:50:07'),
+(607, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-28 17:53:11'),
+(608, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 00:27:35'),
+(609, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 00:35:33'),
+(610, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 00:36:00'),
+(611, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 00:36:00'),
+(612, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 00:36:34'),
+(613, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 00:36:45'),
+(614, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:09:08'),
+(615, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:11:38'),
+(616, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:12:17'),
+(617, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:12:20'),
+(618, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:12:36'),
+(619, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:13:31'),
+(620, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:13:31'),
+(621, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:13:37'),
+(622, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:13:37'),
+(623, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:14:15'),
+(624, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:14:16'),
+(625, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:14:18'),
+(626, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:15:09'),
+(627, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:15:14'),
+(628, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:15:22'),
+(629, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:16:33'),
+(630, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:16:33'),
+(631, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:16:35'),
+(632, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:16:45'),
+(633, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:17:08'),
+(634, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:17:08'),
+(635, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 04:17:14'),
+(636, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 06:31:42'),
+(637, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 17:42:29'),
+(638, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-29 18:24:34'),
+(639, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-11-30 09:29:09'),
+(640, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-01 03:55:11'),
+(641, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-01 03:55:14'),
+(642, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-01 03:55:26'),
+(643, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-01 07:17:01'),
+(644, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-01 07:17:05'),
+(645, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-01 07:17:16'),
+(646, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-04 04:09:06'),
+(647, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-04 04:09:10'),
+(648, '127.0.0.1', 'Desktop', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36', '2023-12-04 04:09:18');
 
 -- --------------------------------------------------------
 
@@ -1775,7 +1935,10 @@ INSERT INTO `login_attempts_admin` (`id`, `AdminID`, `AttemptTime`, `Status`) VA
 (34, 1, '2023-10-24 07:59:49', 1),
 (35, 1, '2023-10-24 08:00:17', 1),
 (36, 1, '2023-10-24 11:59:01', 1),
-(37, 1, '2023-10-26 11:00:04', 1);
+(37, 1, '2023-10-26 11:00:04', 1),
+(38, 1, '2023-11-28 17:50:07', 1),
+(39, 1, '2023-11-29 00:36:45', 1),
+(40, 1, '2023-11-29 04:15:22', 1);
 
 -- --------------------------------------------------------
 
@@ -1826,7 +1989,46 @@ INSERT INTO `login_attempts_user` (`id`, `UserID`, `AttemptTime`, `Status`) VALU
 (29, 2, '2023-11-17 03:55:49', 1),
 (30, 1, '2023-11-19 16:42:59', 1),
 (31, 1, '2023-11-19 17:04:48', 1),
-(32, 1, '2023-11-19 17:32:56', 1);
+(32, 1, '2023-11-19 17:32:56', 1),
+(33, 1, '2023-11-21 05:51:26', 1),
+(34, 1, '2023-11-21 05:55:04', 0),
+(35, 1, '2023-11-21 05:55:26', 0),
+(36, 1, '2023-11-21 05:55:40', 1),
+(37, 1, '2023-11-22 03:49:36', 0),
+(38, 1, '2023-11-22 03:49:51', 1),
+(39, 1, '2023-11-22 08:21:26', 1),
+(40, 1, '2023-11-29 04:16:45', 1),
+(41, 1, '2023-12-01 03:55:26', 1),
+(42, 1, '2023-12-01 07:17:16', 1),
+(43, 1, '2023-12-04 04:09:18', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `security_audit_logs`
+--
+
+CREATE TABLE `security_audit_logs` (
+  `id` int NOT NULL,
+  `UserID` int NOT NULL,
+  `DomainID` int NOT NULL,
+  `Audit_Valid_Till` date NOT NULL,
+  `Security_Audit_Report` varchar(255) NOT NULL,
+  `Submitted_On` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `security_audit_logs`
+--
+
+INSERT INTO `security_audit_logs` (`id`, `UserID`, `DomainID`, `Audit_Valid_Till`, `Security_Audit_Report`, `Submitted_On`) VALUES
+(1, 19, 1, '2023-12-01', 'uploads/CITS_CSA20_EXAMS.pdf', '2023-12-04 07:54:42'),
+(2, 19, 1, '2023-12-01', 'uploads/CITS_CSA20_EXAMS.pdf', '2023-12-04 07:55:29'),
+(3, 19, 1, '2023-12-01', '../uploads/656d8f9a77f1f.pdf', '2023-12-04 08:36:42'),
+(4, 19, 1, '2023-12-08', '../uploads/656d93d583d3b.pdf', '2023-12-04 08:54:45'),
+(5, 19, 1, '2023-12-08', '../uploads/656d94374d59f.pdf', '2023-12-04 08:56:23'),
+(6, 14, 1, '2023-12-02', '../uploads/656d954596ae9.pdf', '2023-12-04 09:00:53'),
+(7, 14, 1, '2023-12-09', '../uploads/656d95a9ee82b.pdf', '2023-12-04 09:02:34');
 
 -- --------------------------------------------------------
 
@@ -1941,6 +2143,12 @@ ALTER TABLE `login_attempts_user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `security_audit_logs`
+--
+ALTER TABLE `security_audit_logs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -1966,7 +2174,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `daily_cron`
 --
 ALTER TABLE `daily_cron`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=991;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1079;
 
 --
 -- AUTO_INCREMENT for table `daily_cron1`
@@ -1984,19 +2192,25 @@ ALTER TABLE `domain_data`
 -- AUTO_INCREMENT for table `hit_counter`
 --
 ALTER TABLE `hit_counter`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=581;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=649;
 
 --
 -- AUTO_INCREMENT for table `login_attempts_admin`
 --
 ALTER TABLE `login_attempts_admin`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `login_attempts_user`
 --
 ALTER TABLE `login_attempts_user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT for table `security_audit_logs`
+--
+ALTER TABLE `security_audit_logs`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
