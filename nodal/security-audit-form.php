@@ -37,7 +37,7 @@
 
                             <?php
 
-                                $query = "SELECT id, Domain_Name, Audit_Valid_Till, Security_Audit_Report FROM domain_data ORDER BY Domain_Name;";
+                                $query = "SELECT id, Domain_Name, Audit_Valid_Till, Security_Audit_Report FROM domain_data WHERE UserID = " . $_SESSION['UserID'] . " ORDER BY Domain_Name;";
 
 
                                 if($stmt = mysqli_prepare($conn, $query)) {
@@ -51,9 +51,9 @@
                                 <td class='small mb-0'><?php echo $counting; ?></td>
                                 <td class='small mb-0'><?php echo $Domain_Name; ?></td>
                                 <td class='small mb-0'><?php echo $valid_date; ?></td>
-                                <td class='small mb-0'><?php if($audit_repot == ''){ ?><a href="javascript:void(0);" class="badge bg-primary">pdf</a> <?php } else { ?><a href="<?php echo $audit_repot; ?>" class="badge bg-primary" target="_blank">pdf</a> <?php } ?>"</td>
+                                <td class='small mb-0'><?php if($audit_repot == ''){ ?><a href="javascript:void(0);" class="badge bg-primary">pdf</a> <?php } else { ?><a href="<?php echo $audit_repot; ?>" class="badge bg-primary" target="_blank">pdf</a> <?php } ?></td>
                                 <td class='small mb-0'>
-                                <button type="button" class="btn btn-sm btn-info mb-2 ms-1 view-data" data-id="<?php echo $id; ?>"><?php echo $id; ?> - Modify Audit Details</button>
+                                <button type="button" class="btn btn-sm btn-info mb-2 ms-1 view-data" data-id="<?php echo $id; ?>">Modify Audit Details</button>
                             </tr>
 
 <?php
